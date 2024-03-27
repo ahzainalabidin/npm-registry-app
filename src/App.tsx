@@ -5,6 +5,7 @@ import SearchPage from "./pages/search/SearchPage";
 import DetailsPage from "./pages/details/DetailsPage";
 import { searchLoader } from "./pages/search/searchLoader";
 import { detailsLoader } from "./pages/details/detailsLoader";
+import { homeLoader } from "./pages/home/homeLoader";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />
+        element: <HomePage />,
+        loader: homeLoader,
       },
       {
         path: '/search',
